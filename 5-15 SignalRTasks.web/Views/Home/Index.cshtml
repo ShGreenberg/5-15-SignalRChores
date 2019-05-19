@@ -1,0 +1,25 @@
+﻿@using _5_15_SignalRTasks.data
+@model IEnumerable<Chore>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="col-md-8 col-md-offset-3 well">
+    <input type="text" id="name" placeholder="Task" class="form-control" />
+    <br />
+    <button class="btn btn-info" id="btn-add-task">Add Task</button>
+</div>
+<div class="container">
+    <table id="chores-table" class="table table-bordered table-striped" style="width: 600px">
+        <tr>
+            <th>Task</th>
+            <th>Status</th>
+        </tr>
+    </table>
+</div>
+
+@section scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aspnet-signalr/1.1.4/signalr.min.js"></script>
+    <script src="~/js/index.js"></script>
+}
+
